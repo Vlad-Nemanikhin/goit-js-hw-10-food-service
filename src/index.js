@@ -4,9 +4,9 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import tmp from "./templates/main.hbs";
 import menu from "./menu.json";
 import './sass/styles.css';
+import './js/theme-switch';
 
-console.log({ els: menu });
-console.log(tmp({ els: menu }));
+const listEl = document.querySelector('.js-menu');
+listEl.innerHTML = tmp(menu);
 
-const listEl = document.querySelector('.menu js-menu');
-listEl.innerHTML = tmp({ els: menu });
+
